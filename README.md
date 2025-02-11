@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Little Lemon Capstone Project - Meta Front-End Developer Certificate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is the **Little Lemon Restaurant Website**, developed as part of the **Meta Front-End Developer Certificate** program. It showcases skills in **HTML, CSS, JavaScript, and React**, integrating best practices in **responsive design, accessibility, and Open Graph metadata** for enhanced social sharing.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload when you make changes. You may also see lint errors in the console.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode. See [Running Tests](https://facebook.github.io/create-react-app/docs/running-tests) for details.
 
 ### `npm run build`
+Builds the app for production, optimizing React for the best performance. The minified files are placed in the `build` folder, ready for deployment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See [Deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
+**Warning:** Ejecting is irreversible! It removes the default build tools and exposes configuration files for full control over Webpack, Babel, and ESLint.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Features
+- **HTML & CSS:** Semantic markup and modern styling techniques.
+- **JavaScript & React:** Component-based architecture for a dynamic user experience.
+- **Open Graph Metadata:** Enhances website preview on social media platforms like Facebook, Twitter, and LinkedIn.
+- **Responsive Design:** Mobile-first approach ensuring usability on all screen sizes.
+- **Accessibility:** Adheres to WCAG guidelines for an inclusive user experience.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Open Graph Implementation
+This project includes **Open Graph meta tags** to enhance link previews when shared on social media platforms. These tags provide:
+- A dynamic **title** and **description** for the website.
+- A featured **image** for social media previews.
+- Metadata to improve **SEO and visibility**.
 
 ## Learn More
+Explore the [Meta Front-End Developer Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) to understand the skills behind this project.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For React documentation, visit [React Docs](https://reactjs.org/).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+**Project by Aspasija as part of the Meta Front-End Developer Certificate.**
