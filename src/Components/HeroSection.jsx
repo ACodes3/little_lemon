@@ -30,10 +30,20 @@ const HeroSection = () => {
           backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark overlay
         }}
       />
-      
+
       <Container sx={{ position: "relative", zIndex: 1 }}>
         <Typography variant="h2" fontWeight="bold" gutterBottom>
-          Welcome to Little Lemon
+          Welcome to{" "}
+          <Box
+            component="span"
+            sx={{
+              fontFamily: "'Pacifico', cursive", // Stylish font for "Little Lemon"
+              color: "#F4CE14", // Standout yellow
+              textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5)", // Add shadow for better contrast
+            }}
+          >
+            Little Lemon
+          </Box>
         </Typography>
         <Typography variant="h5" sx={{ mb: 3 }}>
           Fresh ingredients, authentic flavors, unforgettable experiences.
@@ -49,7 +59,9 @@ const HeroSection = () => {
           }}
           href="/reservations"
         >
-          Reserve a Table
+          <Typography variant="p">
+            Reserve a table
+          </Typography>
         </Button>
       </Container>
     </Box>
