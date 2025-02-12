@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import LogoImg from "../images/fruit.png";
 
-const pages = ["Home", "About", "Reservations", "Order Online", "Contact"];
+const pages = ["Home", "About", "Menu", "Reservations", "Order Online", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {

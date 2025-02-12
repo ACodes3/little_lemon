@@ -7,7 +7,7 @@ import {
     CardContent,
     CardMedia,
     Container,
-    Grid,
+    Grid2 as Grid,
     Typography,
 } from "@mui/material";
 import React from "react";
@@ -80,8 +80,8 @@ const Specials = () => {
           <DinnerDiningIcon fontSize="large" sx={{ color: "#495E57", ml: 1 }} />
         </Typography>
         <Grid container spacing={4} justifyContent="center">
-          {specials.map((special, index) => (
-            <Grid item key={index} xs={12} sm={6} md={4}>
+          {specials.map((special) => (
+            <Grid item key={special.name} xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   maxWidth: 345,
