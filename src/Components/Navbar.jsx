@@ -14,7 +14,14 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import LogoImg from "../images/fruit.png";
 
-const pages = ["Home", "About", "Menu", "Reservations", "Order Online", "Contact"];
+const pages = [
+  "Home",
+  "About",
+  "Menu",
+  "Reservations",
+  "Order Online",
+  "Contact",
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
@@ -37,11 +44,18 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#495E57", width: "100%" }}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "#495E57", width: "100%" }}
+    >
       <Container maxWidth="xl" sx={{ width: "100%" }}>
         <Toolbar disableGutters>
           {/* Logo */}
-          <img src={LogoImg} alt="Logo" style={{ height: "40px", marginRight: "10px" }} />
+          <img
+            src={LogoImg}
+            alt="Logo"
+            style={{ height: "40px", marginRight: "10px" }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -62,7 +76,11 @@ function Navbar() {
 
           {/* Mobile Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton size="large" onClick={handleOpenNavMenu} color="inherit">
+            <IconButton
+              size="large"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
               <MenuIcon />
             </IconButton>
             <Menu
@@ -80,9 +98,14 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} sx={{ textAlign: "center" }}>
-                  <Typography sx={{ color: "white", textAlign: "center" }}>{page}</Typography>
-                </MenuItem>
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <a
+                  href={page === "Home" ? "/" : `/${page.toLowerCase().replace(/\s+/g, "-")}`}
+                  style={{ color: "white", textDecoration: "none", width: "100%", display: "block" }}
+                >
+                  {page}
+                </a>
+              </MenuItem>
               ))}
             </Menu>
           </Box>
@@ -90,7 +113,15 @@ function Navbar() {
           {/* Desktop Navigation */}
           <Box sx={{ display: { xs: "none", md: "flex" }, flexGrow: 1 }}>
             {pages.map((page) => (
-              <Button key={page} onClick={handleCloseNavMenu} sx={{ color: "white" }}>
+              <Button
+                key={page}
+                href={
+                  page === "Home"
+                    ? "/"
+                    : `/${page.toLowerCase().replace(/\s+/g, "-")}`
+                }
+                sx={{ color: "white" }}
+              >
                 {page}
               </Button>
             ))}
@@ -99,7 +130,11 @@ function Navbar() {
           {/* Avatar or Login Icon */}
           <Tooltip title={isLoggedIn ? "Open settings" : "Login"}>
             <IconButton onClick={handleOpenUserMenu} sx={{ ml: 2 }}>
-              {isLoggedIn ? <Avatar alt="User Avatar" src="/static/images/avatar/2.jpg" /> : <LoginIcon sx={{ color: "white" }} />}
+              {isLoggedIn ? (
+                <Avatar alt="User Avatar" src="/static/images/avatar/2.jpg" />
+              ) : (
+                <LoginIcon sx={{ color: "white" }} />
+              )}
             </IconButton>
           </Tooltip>
 
@@ -114,7 +149,9 @@ function Navbar() {
             {isLoggedIn ? (
               settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{setting}</Typography>
+                  <Typography sx={{ textAlign: "center" }}>
+                    {setting}
+                  </Typography>
                 </MenuItem>
               ))
             ) : (

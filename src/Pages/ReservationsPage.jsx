@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../Components/Navbar";
 
 const ReservationsPage = () => {
   return (
-    <div>ReservationsPage</div>
-  )
-}
+    <>
+      <Navbar />
+    </>
+  );
+};
 
-export default ReservationsPage
+export default ReservationsPage;
