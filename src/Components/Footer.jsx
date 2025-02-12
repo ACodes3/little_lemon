@@ -57,7 +57,7 @@ const Footer = () => {
               Quick Links
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-              {["Home", "About Us", "Menu", "Reservations", "Contact"].map(
+              {["Home", "About", "Menu", "Reservations", "Contact"].map(
                 (item) => (
                   <Link
                     key={item}
