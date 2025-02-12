@@ -69,6 +69,7 @@ const Testimonials = () => {
           gutterBottom
           marginBottom={4}
           marginTop={2}
+          color="#495E57"
         >
           Our Customers Love Us 💬
         </Typography>

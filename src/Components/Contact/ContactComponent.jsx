@@ -1,13 +1,14 @@
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import L from 'leaflet'; // Import Leaflet for icon configuration
-import 'leaflet/dist/leaflet.css'; // Ensure Leaflet CSS is imported
-import React from 'react';
+import L from "leaflet"; // Import Leaflet for icon configuration
+import "leaflet/dist/leaflet.css"; // Ensure Leaflet CSS is imported
+import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const ContactComponent = () => {
   // Define the marker icon
   const markerIcon = new L.Icon({
-    iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
+    iconUrl:
+      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png",
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -16,10 +17,20 @@ const ContactComponent = () => {
 
   return (
     <Box sx={{ padding: 3 }}>
-      <Stack direction={{ xs: "column", sm: "row" }} spacing={4} marginTop={4} marginBottom={2}>
+      <Stack
+        direction={{ xs: "column", sm: "row" }}
+        spacing={4}
+        marginTop={4}
+        marginBottom={2}
+      >
         {/* Left: Contact Form */}
         <Box sx={{ flex: 1 }}>
-          <Typography variant="h5" gutterBottom marginBottom={2}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            marginBottom={2}
+            color="#495E57"
+          >
             Contact Us
           </Typography>
           <form>
@@ -45,7 +56,11 @@ const ContactComponent = () => {
                 multiline
                 rows={4}
               />
-              <Button variant="contained" color="primary" fullWidth>
+              <Button
+                variant="contained"
+                sx={{ backgroundColor: "#495E57" }}
+                fullWidth
+              >
                 Submit
               </Button>
             </Stack>
@@ -54,14 +69,14 @@ const ContactComponent = () => {
 
         {/* Right: Map (Leaflet) */}
         <Box sx={{ flex: 1 }}>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" gutterBottom color="#495E57">
             Our Location
           </Typography>
           <MapContainer
             center={[51.505, -0.09]}
             zoom={13}
             scrollWheelZoom={false}
-            style={{ height: '400px', width: '100%' }}
+            style={{ height: "400px", width: "100%" }}
           >
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

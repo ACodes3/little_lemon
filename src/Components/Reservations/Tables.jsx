@@ -40,6 +40,7 @@ const Tables = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          color: "#495E57",
         }}
       >
         Table availability today
