@@ -16,7 +16,7 @@ const ContactComponent = () => {
 
   return (
     <Box sx={{ padding: 3 }}>
-      <Stack direction={{ xs: "column", sm: "row" }} spacing={4} marginTop={4}>
+      <Stack direction={{ xs: "column", sm: "row" }} spacing={4} marginTop={4} marginBottom={2}>
         {/* Left: Contact Form */}
         <Box sx={{ flex: 1 }}>
           <Typography variant="h5" gutterBottom marginBottom={2}>
