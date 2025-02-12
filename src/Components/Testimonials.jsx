@@ -1,5 +1,5 @@
 import { keyframes } from "@emotion/react";
-import { Avatar, Box, Card, CardContent, CardHeader, Container, Grid2 as Grid, Typography } from "@mui/material";
+import { Avatar, Box, Card, CardContent, CardHeader, Container, Divider, Grid2 as Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import React from "react";
 
@@ -44,7 +44,8 @@ const TestimonialCard = styled(Card)(({ theme }) => ({
 
 const Testimonials = () => {
   return (
-    <Box sx={{ py: 5, backgroundColor: "#fdf8ea" }}>
+    <Box sx={{ py: 5, backgroundColor: "#fdf8ea", paddingBottom: "5rem" }}>
+      <Divider sx={{ my: 4, borderColor: "#495E57", width: "80%", mx: "auto" }} />
       <Container>
         <Typography variant="h4" fontWeight="bold" textAlign="center" gutterBottom marginBottom={4}>
           Our Customers Love Us 💬
