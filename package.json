@@ -15,6 +15,7 @@
     "react-dom": "^18.3.1",
     "react-konva": "^18.2.10",
     "react-leaflet": "^4.0.0",
+    "react-pageflip": "^2.0.3",
     "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1"
   },
