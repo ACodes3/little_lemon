@@ -59,7 +59,7 @@ const HeroSection = () => {
           }}
           href="/reservations"
         >
-          <Typography variant="p">
+          <Typography variant="p" href="/reservations">
             Reserve a table
           </Typography>
         </Button>

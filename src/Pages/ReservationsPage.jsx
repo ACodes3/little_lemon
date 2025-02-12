@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import Tables from "../Components/Reservations/Tables";
 
@@ -11,12 +12,13 @@ const ReservationsPage = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          width: "100vw",
+          width: "100%",
           height: "auto",
         }}
       >
         <Tables />
       </div>
+      <Footer />
     </>
   );
 };
