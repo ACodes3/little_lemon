@@ -1,5 +1,5 @@
-import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
+import LoginIcon from "@mui/icons-material/Person";
 import AppBar from "@mui/material/AppBar";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
@@ -20,31 +20,28 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#495E57" }}>
-      <Container maxWidth="xl">
+    <AppBar position="static" sx={{ backgroundColor: "#495E57", width: "100%" }}>
+      <Container maxWidth="xl" sx={{ width: "100%" }}>
         <Toolbar disableGutters>
-          <img
-            src={LogoImg}
-            alt="Logo"
-            style={{ height: "40px", marginRight: "10px" }}
-          />
+          {/* Logo */}
+          <img src={LogoImg} alt="Logo" style={{ height: "40px", marginRight: "10px" }} />
           <Typography
             variant="h6"
             noWrap
@@ -63,118 +60,73 @@ function Navbar() {
             Little Lemon
           </Typography>
 
+          {/* Mobile Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
+            <IconButton size="large" onClick={handleOpenNavMenu} color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
+              anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+              transformOrigin={{ vertical: "top", horizontal: "left" }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
                 "& .MuiPaper-root": {
-                  width: "100%",
-                  maxWidth: "100%",
-                  backgroundColor: "#495E57",
-                  marginX: "12px",
+                  backgroundColor: "#495E57", // Menu background color
+                  width: "100%", // Full-width menu
                 },
               }}
             >
               {pages.map((page) => (
-                <MenuItem
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ justifyContent: "center" }}
-                >
-                  <Typography sx={{ textAlign: "center", color: "white" }}>
-                    {page}
-                  </Typography>
+                <MenuItem key={page} onClick={handleCloseNavMenu} sx={{ textAlign: "center" }}>
+                  <Typography sx={{ color: "white", textAlign: "center" }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Little Lemon
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+
+          {/* Desktop Navigation */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, flexGrow: 1 }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block"}}
-              >
+              <Button key={page} onClick={handleCloseNavMenu} sx={{ color: "white" }}>
                 {page}
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
+
+          {/* Avatar or Login Icon */}
+          <Tooltip title={isLoggedIn ? "Open settings" : "Login"}>
+            <IconButton onClick={handleOpenUserMenu} sx={{ ml: 2 }}>
+              {isLoggedIn ? <Avatar alt="User Avatar" src="/static/images/avatar/2.jpg" /> : <LoginIcon sx={{ color: "white" }} />}
+            </IconButton>
+          </Tooltip>
+
+          {/* User Menu */}
+          <Menu
+            anchorEl={anchorElUser}
+            anchorOrigin={{ vertical: "top", horizontal: "right" }}
+            transformOrigin={{ vertical: "top", horizontal: "right" }}
+            open={Boolean(anchorElUser)}
+            onClose={handleCloseUserMenu}
+          >
+            {isLoggedIn ? (
+              settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
-                    {setting}
-                  </Typography>
+                  <Typography sx={{ textAlign: "center" }}>{setting}</Typography>
                 </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+              ))
+            ) : (
+              <MenuItem onClick={() => setIsLoggedIn(true)}>
+                <Typography>Login</Typography>
+              </MenuItem>
+            )}
+          </Menu>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
+
 export default Navbar;
