@@ -34,12 +34,30 @@ const Tables = () => {
 
   return (
     <div>
-        {/* TODO: Add mobile responsiveness */}
-      <h2>Restaurant Layout</h2>
+      {/* TODO: Add mobile responsiveness */}
+      <h2
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        Table availability today
+      </h2>
       <Stage width={800} height={500}>
         <Layer>
           {/* Restaurant Walls */}
-          <Rect x={10} y={10} width={780} height={480} fill="#e0e0e0" stroke="black" strokeWidth={2} />
+          <Rect
+            x={10}
+            y={10}
+            width={780}
+            height={480}
+            fill="#e0e0e0"
+            stroke="black"
+            strokeWidth={2}
+          />
 
           {/* Doors */}
           <Rect x={350} y={480} width={80} height={10} fill="brown" />
@@ -53,12 +71,42 @@ const Tables = () => {
           <Rect x={780} y={250} width={10} height={50} fill="lightblue" />
 
           {/* Bar - Placed in Bottom Right */}
-          <Rect x={600} y={400} width={160} height={80} fill="#8B4513" stroke="black" strokeWidth={2} />
-          <Text x={660} y={430} text="BAR" fontSize={20} fill="white" fontStyle="bold" />
+          <Rect
+            x={600}
+            y={400}
+            width={160}
+            height={80}
+            fill="#8B4513"
+            stroke="black"
+            strokeWidth={2}
+          />
+          <Text
+            x={660}
+            y={430}
+            text="BAR"
+            fontSize={20}
+            fill="white"
+            fontStyle="bold"
+          />
 
           {/* Live Music Section - Bottom Left */}
-          <Rect x={20} y={400} width={300} height={80} fill="#444" stroke="black" strokeWidth={2} />
-          <Text x={120} y={430} text="LIVE MUSIC" fontSize={18} fill="white" fontStyle="bold" />
+          <Rect
+            x={20}
+            y={400}
+            width={300}
+            height={80}
+            fill="#444"
+            stroke="black"
+            strokeWidth={2}
+          />
+          <Text
+            x={120}
+            y={430}
+            text="LIVE MUSIC"
+            fontSize={18}
+            fill="white"
+            fontStyle="bold"
+          />
 
           {/* Tables */}
           {tables.map((table) => (

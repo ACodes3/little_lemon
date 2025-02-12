@@ -6,7 +6,17 @@ const ReservationsPage = () => {
   return (
     <>
       <Navbar />
-      <Tables />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100vw",
+          height: "auto",
+        }}
+      >
+        <Tables />
+      </div>
     </>
   );
 };
