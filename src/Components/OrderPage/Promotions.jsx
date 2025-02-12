@@ -1,13 +1,13 @@
 import {
-    Box,
-    Button,
-    Card,
-    CardActions,
-    CardContent,
-    CardMedia,
-    Container,
-    Grid2 as Grid,
-    Typography,
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Container,
+  Grid2 as Grid,
+  Typography,
 } from "@mui/material";
 import { styled } from "@mui/system";
 import React from "react";
@@ -89,7 +89,7 @@ const Promotions = () => {
   return (
     <Box sx={{ py: 5, backgroundColor: "#fdf8ea" }}>
       <Container>
-        <Typography variant="h4" fontWeight="bold" textAlign="center" mb={4}>
+        <Typography variant="h4" fontWeight="bold" textAlign="center" mb={4} color="#495E57">
           Today's Special 🎉
         </Typography>
 
@@ -140,6 +140,7 @@ const Promotions = () => {
           textAlign="center"
           mt={5}
           mb={3}
+          color="#495E57"
         >
           Special Offers 🏷️
         </Typography>

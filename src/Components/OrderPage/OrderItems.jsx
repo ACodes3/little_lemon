@@ -70,6 +70,7 @@ const OrderItems = () => {
                   textAlign="center"
                   mt={5}
                   mb={3}
+                  color="#495E57"
                 >
                   Order Now 🍽️
                 </Typography>
