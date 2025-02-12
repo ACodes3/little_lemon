@@ -1,5 +1,7 @@
 import React from "react";
 import AboutComponent from "../Components/About/AboutComponent";
+import Chefs from "../Components/About/Chefs";
+import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 const AboutPage = () => {
@@ -7,6 +9,8 @@ const AboutPage = () => {
     <>
       <Navbar />
       <AboutComponent />
+      <Chefs />
+      <Footer />
     </>
   );
 };
