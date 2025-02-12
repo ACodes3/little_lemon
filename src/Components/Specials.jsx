@@ -1,14 +1,14 @@
 import DinnerDiningIcon from "@mui/icons-material/DinnerDining";
 import {
-    Box,
-    Button,
-    Card,
-    CardActions,
-    CardContent,
-    CardMedia,
-    Container,
-    Grid2 as Grid,
-    Typography,
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Container,
+  Grid2 as Grid,
+  Typography,
 } from "@mui/material";
 import React from "react";
 
@@ -132,6 +132,7 @@ const Specials = () => {
         <Box textAlign="center" mt={4}>
           <Button
             variant="contained"
+            href="/menu"
             sx={{
               backgroundColor: "#f4ce14",
               color: "#495E57",
