@@ -13,7 +13,17 @@ const ReservationsPage = () => {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div
+        className="container"
+        style={{
+          margin: "20px",
+          display: "flex",
+          justifyContent: "end",
+          alignContent: "end",
+          alignItems: "end",
+          alignSelf: "end",
+        }}
+      >
         <Button
           variant="contained"
           sx={{

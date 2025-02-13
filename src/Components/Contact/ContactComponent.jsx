@@ -3,6 +3,7 @@ import L from "leaflet"; // Import Leaflet for icon configuration
 import "leaflet/dist/leaflet.css"; // Ensure Leaflet CSS is imported
 import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import ContactInfo from "./ContactInfo";
 
 const ContactComponent = () => {
   // Define the marker icon
@@ -72,6 +73,7 @@ const ContactComponent = () => {
           <Typography variant="h5" gutterBottom color="#495E57">
             Our Location
           </Typography>
+          <ContactInfo />
           <MapContainer
             center={[51.505, -0.09]}
             zoom={13}
