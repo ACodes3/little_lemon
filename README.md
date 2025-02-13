@@ -2,6 +2,8 @@
 
 This project is the **Little Lemon Restaurant Website**, developed as part of the **Meta Front-End Developer Certificate** program. It showcases skills in **HTML, CSS, JavaScript, and React**, integrating best practices in **responsive design, accessibility, and Open Graph metadata** for enhanced social sharing.
 
+**Meta Back-End Developer Project** available at [Little Lemon Restaurant Backend](https://github.com/ACodes3/little_lemon).
+
 ## Available Scripts
 
 In the project directory, you can run:
