@@ -32,7 +32,7 @@ const ContactInfo = () => {
               <LocationOnIcon color="primary" />
               456 Elm St, Townsville, ST 67890
             </Typography>
-            <Typography>
+            <Typography display="flex" alignItems="center">
               <PhoneIcon /> (987) 654-3210
             </Typography>
           </Box>
